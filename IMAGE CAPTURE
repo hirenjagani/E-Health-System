@@ -1,0 +1,100 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import com.googlecode.javacv.OpenCVFrameGrabber;
+import com.googlecode.javacv.cpp.opencv_core.IplImage;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.imageio.ImageIO;
+import java.io.*;
+
+import com.github.sarxos.webcam.Webcam;
+
+public class ImageTester extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ImageTester frame = new ImageTester();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public ImageTester() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnCapture = new JButton("Capture");
+		btnCapture.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				
+				Webcam webcam = Webcam.getDefault();
+				
+				webcam.open();
+				try {
+					ImageIO.write(webcam.getImage(),"JPG", new File("firstcapture.jpg"));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+			/*	OpenCVFrameGrabber grabber = new OpenCVFrameGrabber(0);
+				
+				try {
+					
+					grabber.start();
+					IplImage img = grabber.grab();
+			         
+					if(img!=null) {
+						
+						cvSaveImage("Cap.jpeg",img);
+						
+					}
+					
+					} catch(Exception e) {
+						e.printStackTrace();
+					} **/
+			}
+				
+				
+				
+				
+				
+				
+				
+			
+		});
+		btnCapture.setBounds(118, 79, 198, 95);
+		contentPane.add(btnCapture);
+	}
+
+	protected void cvSaveImage(String string, IplImage img) {
+		// TODO Auto-generated method stub
+		
+	}
+}
