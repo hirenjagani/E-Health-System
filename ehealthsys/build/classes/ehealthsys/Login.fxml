@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehealthsys.LoginController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="700.0" pickOnBounds="true" />
+      <AnchorPane layoutX="363.0" layoutY="54.0" prefHeight="291.0" prefWidth="323.0" style="-fx-background-color: #9c2827;">
+         <children>
+            <PasswordField fx:id="txtPassword" layoutX="46.0" layoutY="146.0" prefHeight="26.0" prefWidth="212.0" promptText="Password" />
+            <Button layoutX="46.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleActionLogin" onMouseClicked="#handleActionLogin" prefHeight="32.0" prefWidth="212.0" style="-fx-background-color: #e45652;" text="Login" />
+            <Label layoutX="123.0" layoutY="23.0" prefHeight="46.0" prefWidth="57.0" text="Sign-In" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUser" layoutX="46.0" layoutY="99.0" prefHeight="26.0" prefWidth="212.0" promptText="Username" />
+            <Label fx:id="txtLabel" layoutX="46.0" layoutY="182.0" />
+            <Button layoutX="115.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleActionNewUser" onMouseClicked="#handleActionNewUser" style="-fx-background-color: #9c2827;" text="New User?" textFill="#e2e2e2" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="291.0" fitWidth="323.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true">
+         <image>
+            <Image url="@Images/s2.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
