@@ -17,43 +17,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import javax.swing.JButton;
 
 /**
  * FXML Controller class
  *
- * @author hiren
+ * @author Parth Kaushik
  */
-
-
-
-
-
-
-
-  
-
-public class RegisterController implements Initializable {
+public class QuestionController implements Initializable {
 @FXML
 
-private Label txtLabel; 
-  
-      
-  
-
-
-
-@FXML
-private void handleActionSubmit(ActionEvent event) throws IOException{
-    Parent questionpg = FXMLLoader.load(getClass().getResource("Question.fxml"));
-    Scene questionpgscene = new Scene(questionpg);
-    Stage window = (Stage)((Node) event.getSource()).getScene().getWindow();
-    window.hide();
-    window.setScene(questionpgscene);
-    window.show();
+     private Label txtLabel; 
+     @FXML
+private void handleActionProceed(ActionEvent event) throws IOException{
+Parent symptomspg = FXMLLoader.load(getClass().getResource("Symptoms.fxml"));
+Scene symptomspgscene = new Scene(symptomspg);
+Stage window1 = (Stage)((Node) event.getSource()).getScene().getWindow();
+window1.hide();
+window1.setScene(symptomspgscene);
+window1.show();
 }
-
-
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
