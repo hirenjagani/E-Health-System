@@ -20,6 +20,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 /**
@@ -28,43 +30,72 @@ import javafx.stage.Stage;
  * @author Parth Kaushik
  */
 public class SymptomsController implements Initializable {
+ @FXML
+    private Label txtLabel; 
+ @FXML
+    
+private RadioButton r1;
+ 
 
-    ObservableList<String> headche = FXCollections.observableArrayList("Severe","Mild");
+  @FXML
     
-     ObservableList<String> CC = FXCollections.observableArrayList("Severe","Mild");
-    
-@FXML
-    
-    private ChoiceBox Headche;
-   
-    private ChoiceBox Cough;
-    
-
+private RadioButton r2;
   
+   @FXML
+    
+private RadioButton r3;
     @FXML
-    private void loaddata1(){
-     String c="Severe";
-          String d = "Mild";
-          
-      CC.removeAll(CC);
-          CC.addAll(c,d);
-          Cough.getItems().addAll(CC);
+    
+private RadioButton r4;
+     @FXML
+    
+private RadioButton r5;
+      @FXML
+    
+private RadioButton r6;
+      
+     
+    
+    @FXML
+    
+    private void handleActionradio(ActionEvent event) {
+    if(r1.isSelected() && r4.isSelected() && r5.isSelected()){
+    
+     txtLabel.setText("You are suffering from Cold & Cough");
     
     
     }
-      @FXML 
-      private void loaddata(){
-          String a ="Severe";
-          String b  = "Mild";
-          
-          headche.removeAll(headche);
-          headche.addAll(a,b);
-          Headche.getItems().addAll(headche);
-          
-        
-      
-      }
+    else{
     
+    txtLabel.setText("Bad selection");
+    
+            }
+    }
+ 
+ 
+ 
+ 
+    // Code for Opening diagnosis results when user press submit button on symptoms page
+    @FXML
+private void handleActionSubmit(ActionEvent event) throws IOException{
+    
+    
+    Parent Diagnosispg = FXMLLoader.load(getClass().getResource("Diagnosis Results.fxml"));
+    Scene Diagnosispgscene = new Scene(Diagnosispg);
+    Stage window2 = (Stage)((Node) event.getSource()).getScene().getWindow();
+    window2.hide();
+    window2.setScene(Diagnosispgscene);
+    window2.show();
+}
+    
+   
+    
+
+        
+
+  
+    
+   
     
    
     /**
@@ -72,9 +103,6 @@ public class SymptomsController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
-        loaddata();
-        loaddata1();
        
         
     }    
