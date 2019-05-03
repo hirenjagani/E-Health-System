@@ -54,46 +54,43 @@ public RadioButton r5;
     
 public RadioButton r6;
       
-     
+              
+String data;
+
+public void coldcough(){
+  if()
+}
+
+public String check() {
+ if (r1.isSelected()==TRUE){
+      data ="radio1";
+
+  }
+ return data;
+}
     
     
     
-  /**   
- public void change(){
- 
- 
- 
-     if(r1.isSelected() && r4.isSelected() && r5.isSelected()){
-    
-     txtLabel.setText("You are suffering from Cold & Cough");
-    
-    
-    }
-    else{
-    
-    txtLabel.setText("Bad selection");
-    
-            }
-    } ***/
+
  
 
  
     // Code for Opening diagnosis results when user press submit button on symptoms page
     @FXML
 private void handleActionSubmit(ActionEvent event) throws IOException{
-    
-    
-   
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("Diagnosis Results.fxml"));
+    Parent root = loader.load();
+    DiagnosisResultsController control = loader.<DiagnosisResultsController>getController();
+    String data1=check();
+    control.setData(data1);
 
-
     
-    Parent Diagnosispg = FXMLLoader.load(getClass().getResource("Diagnosis Results.fxml"));
-    Scene Diagnosispgscene = new Scene(Diagnosispg);
+    //Parent Diagnosispg = FXMLLoader.load(getClass().getResource("Diagnosis Results.fxml"));
+    Scene Diagnosispgscene = new Scene(root);
     Stage window2 = (Stage)((Node) event.getSource()).getScene().getWindow();
     window2.hide();
     window2.setScene(Diagnosispgscene);
     window2.show();
-
     
 }
     
