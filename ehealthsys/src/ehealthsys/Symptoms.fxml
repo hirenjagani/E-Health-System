@@ -14,33 +14,38 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <RadioButton fx:id="r8" layoutX="252.0" layoutY="185.0" mnemonicParsing="false" text="Nausea" />
-      <RadioButton fx:id="r7" layoutX="129.0" layoutY="185.0" mnemonicParsing="false" text="Vomiting" />
-      <RadioButton fx:id="r10" layoutX="550.0" layoutY="185.0" mnemonicParsing="false" text="StomachPain" />
-      <RadioButton fx:id="r5" layoutX="550.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleActionradio" text="Fever" />
-      <RadioButton fx:id="r4" layoutX="417.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleActionradio" text="Dry Cough" />
-      <RadioButton fx:id="r3" layoutX="252.0" layoutY="120.0" mnemonicParsing="false" text="Nose Congestion">
+      <RadioButton fx:id="r8" layoutX="260.0" layoutY="194.0" mnemonicParsing="false" text="Nausea" />
+      <RadioButton fx:id="r7" layoutX="147.0" layoutY="194.0" mnemonicParsing="false" text="Vomiting" />
+      <RadioButton fx:id="r10" layoutX="550.0" layoutY="194.0" mnemonicParsing="false" text="StomachPain" />
+      <RadioButton fx:id="r5" layoutX="550.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleActionSubmit" text="Sneezing" />
+      <RadioButton fx:id="r4" layoutX="425.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleActionSubmit" text="Soar Throat" />
+      <RadioButton fx:id="r3" layoutX="260.0" layoutY="144.0" mnemonicParsing="false" text="Nose Congestion">
          <toggleGroup>
             <ToggleGroup fx:id="ZHAPPEN" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="r2" layoutX="129.0" layoutY="120.0" mnemonicParsing="false" text="Watery Stool" />
-      <RadioButton fx:id="r1" layoutX="14.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleActionradio" text="Runny Nose" toggleGroup="$ZHAPPEN" />
-      <RadioButton fx:id="r12" layoutX="129.0" layoutY="239.0" mnemonicParsing="false" text="Fatigue" />
-      <RadioButton fx:id="r11" layoutX="14.0" layoutY="239.0" mnemonicParsing="false" text="Red Eye">
+      <RadioButton fx:id="r2" layoutX="147.0" layoutY="144.0" mnemonicParsing="false" text="Studdy Nose" />
+      <RadioButton fx:id="r1" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleActionSubmit" text="Runny Nose" toggleGroup="$ZHAPPEN" />
+      <RadioButton fx:id="r12" layoutX="147.0" layoutY="254.0" mnemonicParsing="false" text="Fatigue" />
+      <RadioButton fx:id="r11" layoutX="14.0" layoutY="254.0" mnemonicParsing="false" text="Red Eye">
          <toggleGroup>
             <ToggleGroup fx:id="XHAPPEN" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="r6" layoutX="16.0" layoutY="185.0" mnemonicParsing="false" text="Tonsils" />
-      <RadioButton fx:id="r9" layoutX="417.0" layoutY="185.0" mnemonicParsing="false" text="Ear Pain" />
-      <RadioButton fx:id="r13" layoutX="252.0" layoutY="239.0" mnemonicParsing="false" text="Abdominal Cramps" toggleGroup="$XHAPPEN" />
-      <RadioButton fx:id="r14" layoutX="417.0" layoutY="239.0" mnemonicParsing="false" text="Loss Apetite" />
-      <RadioButton fx:id="r15" layoutX="550.0" layoutY="239.0" mnemonicParsing="false" text="Sweating" toggleGroup="$ZHAPPEN" />
-      <Button layoutX="156.0" layoutY="317.0" mnemonicParsing="false" onAction="#handleActionSubmit" onMouseClicked="#handleActionSubmit" prefHeight="32.0" prefWidth="377.0" text="SUBMIT" textFill="#1e0303">
+      <RadioButton fx:id="r6" layoutX="14.0" layoutY="194.0" mnemonicParsing="false" text="Fever" />
+      <RadioButton fx:id="r9" layoutX="425.0" layoutY="194.0" mnemonicParsing="false" text="Watery Stool" />
+      <RadioButton fx:id="r13" layoutX="251.0" layoutY="254.0" mnemonicParsing="false" text="Abdominal Cramps" toggleGroup="$XHAPPEN" />
+      <RadioButton fx:id="r14" layoutX="425.0" layoutY="254.0" mnemonicParsing="false" text="Loss Apetite" />
+      <RadioButton fx:id="r15" layoutX="550.0" layoutY="254.0" mnemonicParsing="false" text="Sweating" toggleGroup="$ZHAPPEN" />
+      <Button layoutX="446.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleActionSubmit" onMouseClicked="#handleActionSubmit" prefHeight="32.0" prefWidth="188.0" text="SUBMIT" textFill="#1e0303">
          <font>
             <Font size="23.0" />
          </font>
       </Button>
+      <Button layoutX="118.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleActionBack" onMouseClicked="#handleActionBack" prefHeight="32.0" prefWidth="144.0" text="Back" />
+      <RadioButton layoutX="14.0" layoutY="94.0" mnemonicParsing="false" text="Lack of Energy" />
+      <RadioButton layoutX="147.0" layoutY="94.0" mnemonicParsing="false" text="Irritation" />
+      <RadioButton layoutX="260.0" layoutY="94.0" mnemonicParsing="false" text="Dry &amp; Chest Cough" />
+      <RadioButton layoutX="425.0" layoutY="94.0" mnemonicParsing="false" text="Weakness" />
    </children>
 </AnchorPane>

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ehealthsys.jar" size="161295" download="eager" />
+    <jar href="ehealthsys.jar" size="274291" download="eager" />
     <jar href="lib\ffmpeg-2.1.1-windows-x86.jar" size="10720957" download="eager" />
     <jar href="lib\ffmpeg-2.1.1-windows-x86_64.jar" size="11225446" download="eager" />
     <jar href="lib\javacpp.jar" size="160677" download="eager" />

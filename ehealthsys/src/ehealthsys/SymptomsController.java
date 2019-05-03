@@ -34,32 +34,36 @@ public class SymptomsController implements Initializable {
     private Label txtLabel; 
  @FXML
     
-private RadioButton r1;
+public  RadioButton r1;
  
 
   @FXML
     
-private RadioButton r2;
+public RadioButton r2;
   
    @FXML
     
-private RadioButton r3;
+public RadioButton r3;
     @FXML
     
-private RadioButton r4;
+public RadioButton r4;
      @FXML
     
-private RadioButton r5;
+public RadioButton r5;
       @FXML
     
-private RadioButton r6;
+public RadioButton r6;
       
      
     
-    @FXML
     
-    private void handleActionradio(ActionEvent event) {
-    if(r1.isSelected() && r4.isSelected() && r5.isSelected()){
+    
+  /**   
+ public void change(){
+ 
+ 
+ 
+     if(r1.isSelected() && r4.isSelected() && r5.isSelected()){
     
      txtLabel.setText("You are suffering from Cold & Cough");
     
@@ -70,15 +74,18 @@ private RadioButton r6;
     txtLabel.setText("Bad selection");
     
             }
-    }
+    } ***/
  
- 
- 
+
  
     // Code for Opening diagnosis results when user press submit button on symptoms page
     @FXML
 private void handleActionSubmit(ActionEvent event) throws IOException{
     
+    
+   
+
+
     
     Parent Diagnosispg = FXMLLoader.load(getClass().getResource("Diagnosis Results.fxml"));
     Scene Diagnosispgscene = new Scene(Diagnosispg);
@@ -86,10 +93,20 @@ private void handleActionSubmit(ActionEvent event) throws IOException{
     window2.hide();
     window2.setScene(Diagnosispgscene);
     window2.show();
+
+    
 }
     
    
-    
+    @FXML
+private void handleActionBack(ActionEvent event) throws IOException{
+    Parent Questionpg = FXMLLoader.load(getClass().getResource("Question.fxml"));
+    Scene Registerpgscene = new Scene(Questionpg);
+    Stage windowb2 = (Stage)((Node) event.getSource()).getScene().getWindow();
+    windowb2.hide();
+    windowb2.setScene(Registerpgscene);
+    windowb2.show();
+}
 
         
 

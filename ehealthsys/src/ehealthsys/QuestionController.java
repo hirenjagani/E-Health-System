@@ -37,6 +37,18 @@ window1.setScene(symptomspgscene);
 window1.show();
 }
     
+
+@FXML
+private void handleActionBack(ActionEvent event) throws IOException{
+    Parent Registerpg = FXMLLoader.load(getClass().getResource("Register.fxml"));
+    Scene Registerpgscene = new Scene(Registerpg);
+    Stage windowb1 = (Stage)((Node) event.getSource()).getScene().getWindow();
+    windowb1.hide();
+    windowb1.setScene(Registerpgscene);
+    windowb1.show();
+}
+
+
     
     
     @Override

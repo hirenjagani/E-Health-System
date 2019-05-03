@@ -33,10 +33,11 @@
             <Font size="19.0" />
          </font>
       </RadioButton>
-      <Button layoutX="291.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleActionProceed" onMouseClicked="#handleActionProceed" text="Proceed">
+      <Button layoutX="480.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleActionProceed" onMouseClicked="#handleActionProceed" text="Proceed">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
+      <Button layoutX="182.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleActionBack" onMouseClicked="#handleActionBack" prefHeight="36.0" prefWidth="74.0" text="Back" />
    </children>
 </AnchorPane>

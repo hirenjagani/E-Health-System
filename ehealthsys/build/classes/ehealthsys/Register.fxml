@@ -34,5 +34,6 @@
          </children>
       </AnchorPane>
       <Button layoutX="448.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleActionSubmit" onMouseClicked="#handleActionSubmit" prefHeight="61.0" prefWidth="87.0" text="SUBMIT" />
+      <Button layoutX="448.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleActionBack" onMouseClicked="#handleActionBack" prefHeight="42.0" prefWidth="87.0" text="Back" />
    </children>
 </AnchorPane>

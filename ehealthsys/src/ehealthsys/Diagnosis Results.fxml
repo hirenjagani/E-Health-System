@@ -4,13 +4,20 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehealthsys.DiagnosisResultsController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass=".bodybg" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehealthsys.DiagnosisResultsController">
     <stylesheets>
         <URL value="@diagnosis results.css" />
     </stylesheets>
    <children>
-      <Button layoutX="115.0" layoutY="62.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="384.0" text="Button" />
+      <Button layoutX="199.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleActionBack" onMouseClicked="#handleActionBack" prefHeight="57.0" prefWidth="291.0" text="Back" />
       <Label fx:id="txtLabel" layoutX="94.0" layoutY="188.0" prefHeight="44.0" prefWidth="407.0" text="Label" />
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BG" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
