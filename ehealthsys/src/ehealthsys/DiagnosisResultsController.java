@@ -5,18 +5,11 @@
  */
 package ehealthsys;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -25,14 +18,12 @@ import javafx.stage.Stage;
  */
 public class DiagnosisResultsController implements Initializable {
 
-   private sympt selectedsymptoms;
-   
-   @FXML
-   private Label txtlabel;
-   
-   
-   
-   
+    @FXML
+    private Label txtLabel;
+
+    public void setData(String data) {
+        txtLabel.setText(data);
+    }
    
    @FXML
 private void handleActionBack(ActionEvent event) throws IOException{
@@ -43,32 +34,9 @@ private void handleActionBack(ActionEvent event) throws IOException{
     windowb3.setScene(Symptomspgscene);
     windowb3.show();
 }
-   
-    
-    
-    
-    
-    
     /**
      * Initializes the controller class.
      */
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
