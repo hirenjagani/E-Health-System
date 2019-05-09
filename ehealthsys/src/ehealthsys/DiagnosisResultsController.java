@@ -5,11 +5,15 @@
  */
 package ehealthsys;
 
+import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import java.util.*;
+import javafx.event.ActionEvent;
+import javafx.fxml.*;
+import javafx.scene.*;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
 
 /**
  * FXML Controller class
@@ -20,7 +24,12 @@ public class DiagnosisResultsController implements Initializable {
 
     @FXML
     private Label txtLabel;
-
+    
+    
+    
+    
+    
+    
     public void setData(String data) {
         txtLabel.setText(data);
     }
