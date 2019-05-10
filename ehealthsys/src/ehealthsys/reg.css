@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+
+    -fx-background-image:url('reg.png');
+    -fx-background-size:cover;
+    
+}

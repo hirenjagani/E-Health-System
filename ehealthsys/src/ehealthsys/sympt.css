@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+
+    
+    -fx-background-image:url('sympt.jpg');
+    -fx-background-size:cover;
+    
+}
