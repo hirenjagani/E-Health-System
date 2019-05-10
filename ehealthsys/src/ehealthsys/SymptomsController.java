@@ -37,8 +37,8 @@ String data;
 
 
 
-int countc=0,countd=0,countcp=0,countf=0;
-    public int countcough(){
+public int countc=0,countd=0,countcp=0,countf=0;
+    public void countcough(){
         if (r1.isSelected())
             countc++;
         if (r2.isSelected())
@@ -50,10 +50,10 @@ int countc=0,countd=0,countcp=0,countf=0;
         if (r5.isSelected())
             countc++;
         if (r6.isSelected())
-            countc++;        
-        return countc;
+            countc++;
+        System.out.println("cc :"+countc);
     }
-    public int countdiahorea(){
+    public void countdiahorea(){
         if (r7.isSelected())
             countd++;
         if (r8.isSelected())
@@ -66,9 +66,9 @@ int countc=0,countd=0,countcp=0,countf=0;
             countd++;
         if (r6.isSelected())
             countd++;        
-        return countd;
+        System.out.println("cd "+countd);
     }
-    public int countconstipation(){
+    public void countconstipation(){
         if (r12.isSelected())
             countcp++;
         if (r13.isSelected())
@@ -79,9 +79,9 @@ int countc=0,countd=0,countcp=0,countf=0;
             countcp++;
         if (r15.isSelected())
             countcp++;        
-        return countcp;
+        System.out.println("cp "+countcp);
     }
-    public int countfleu(){
+    public void countfleu(){
         if (r15.isSelected())
             countf++;
         if (r16.isSelected())
@@ -98,67 +98,113 @@ int countc=0,countd=0,countcp=0,countf=0;
             countf++;
         if (r5.isSelected())
             countf++;
-        return countf;
+        System.out.println("f "+countf);
     }
-   int add= countc+countf+countd+countcp;
+   public int[] countarr = new int[3];
    
-   int[] countarr ={countc,countf,countd,countcp};
    
    int max=0;
    
    public void findmax(){
        
-       for (int i=0;i<countarr.length;i++){
-          if (countarr[i]>=max){
-              max=countarr[i];
-          }        
-       }
    }
     
+   @FXML
+   public void handlecoughcold(){
+       r7.setSelected(false);
+       r8.setSelected(false);
+       r9.setSelected(false);
+       r10.setSelected(false);
+       r11.setSelected(false);
+       r13.setSelected(false);
+   }
+   @FXML
+   public void handlediahorea(){
+       r1.setSelected(false);
+       r2.setSelected(false);
+       r3.setSelected(false);
+       r4.setSelected(false);
+       r5.setSelected(false);
+       r13.setSelected(false);
+   }
+   
+   @FXML
+   public void handleconsipation(){
+       r1.setSelected(false);
+       r2.setSelected(false);
+       r3.setSelected(false);
+       r4.setSelected(false);
+       r5.setSelected(false);
+       r6.setSelected(false);
+       r8.setSelected(false);
+       r10.setSelected(false);
+       r11.setSelected(false);
+       r16.setSelected(false);
+       r17.setSelected(false);
+       r18.setSelected(false);
+   }
+      
+   @FXML
+   public void handlefever(){
+       r7.setSelected(false);
+       r8.setSelected(false);
+       r9.setSelected(false);
+       r10.setSelected(false);
+       r11.setSelected(false);
+       r12.setSelected(false);
+       r13.setSelected(false);
+   }
    
    public String diseasedisplay(){
-       countcough();
-       countdiahorea();
-       countconstipation();
-       countfleu();
-       boolean checkoptionselected = checkalloptionsselected();
-       if(checkoptionselected==true || add<6){
-           data= "Wrong Options selected";
-       }else{
-           findmax();
-           if (max == countarr[0]){
-               
-           }
-           if (max == countarr[1]){
-               
-           }
-           if (max == countarr[2]){
-               
-           }
-           if (max == countarr[3]){
-               
-           }
-           
-           
-       }
-       return null;
+       
+        if (r10.isSelected()){
+            data = "diahorea";
+        }else if (r13.isSelected()){
+            data = "constipation";
+        }else{
+            data = "fleu and cold and cough";
+        }
+//       countcough();
+//       countdiahorea();
+//       countconstipation();
+//       countfleu();
+//       countarr[0]=countc;
+//       countarr[1]=countd;
+//       countarr[2]=countcp;
+//       countarr[3]=countf;
+//       System.out.println(countarr.length);
+//       for (int i=0;i<countarr.length;i++){
+//          if (countarr[i]>=max){
+//              System.out.println(countarr[i]);
+//              max=countarr[i];
+//              System.out.println(max);
+//          }        
+//       }
+//           
+//           System.out.println("MAX : "+max);
+//           System.out.println("arr1 : "+countarr[0]);
+//           System.out.println("arr2 : "+countarr[1]);
+//           System.out.println("arr3 : "+countarr[2]);
+//           System.out.println("arr4 : "+countarr[3]);
+//           if (max == countarr[0]){
+//               data = "Suffering from cold and cough";
+//           }
+//           else if (max == countarr[1]){
+//               data = " Suffering form Diahorea";
+//           }
+//           else if (max == countarr[2]){
+//               data = "Suffering from consipation";
+//           }
+//           else {
+//               data = "suffering from fleu";
+//           }
+//           
+//           
+//       
+       return data;
    }
    
-   
-   public boolean checkalloptionsselected(){
-       boolean labeloption;
-       labeloption = add == 18;
-   return labeloption;
-   }
-   
 
-    
-    
-    
-
- 
-
- 
     // Code for Opening diagnosis results when user press submit button on symptoms page
     @FXML
 private void handleActionSubmit(ActionEvent event) throws IOException{

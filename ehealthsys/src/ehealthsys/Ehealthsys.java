@@ -6,6 +6,7 @@
 package ehealthsys;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -34,9 +35,8 @@ public class Ehealthsys extends Application {
     /**
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         launch(args);
-        
     }
     
 }
